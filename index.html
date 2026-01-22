@@ -1,56 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>The Blast Community</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLAST | FiveM Official</title>
+    <style>
+        /* Modern Dark Purple Theme */
+        :root {
+            --primary-purple: #8a2be2;
+            --dark-bg: #0d0d12;
+            --card-bg: #1a1a2e;
+            --blast-gradient: linear-gradient(90deg, #ff00ff, #8a2be2, #00d4ff);
+        }
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(180deg, #1a032b, #090011);
-      color: white;
-      text-align: center;
-    }
+        body {
+            background-color: var(--dark-bg);
+            color: #ffffff;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            scroll-behavior: smooth;
+        }
 
-    h1 {
-      font-size: 4rem;
-      margin-top: 20vh;
-      color: #a855f7;
-      letter-spacing: 4px;
-    }
+        /* Navigation */
+        nav {
+            background: rgba(13, 13, 18, 0.95);
+            padding: 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid var(--primary-purple);
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
 
-    p {
-      max-width: 600px;
-      margin: 20px auto;
-      opacity: 0.85;
-      font-size: 1.1rem;
-    }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
 
-    a {
-      display: inline-block;
-      margin-top: 30px;
-      padding: 14px 32px;
-      background: #7c3aed;
-      color: white;
-      text-decoration: none;
-      border-radius: 10px;
-      font-weight: bold;
-    }
+        nav a:hover {
+            color: #ff00ff;
+        }
 
-    a:hover {
-      background: #9333ea;
-    }
-  </style>
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(rgba(13, 13, 18, 0.8), rgba(13, 13, 18, 0.8)), 
+                        url('https://wallpaperaccess.com/full/2311543.jpg'); /* Swap with your gang photo */
+            background-size: cover;
+            background-position: center;
+        }
+
+        .blast-logo {
+            font-size: 8rem;
+            font-weight: 900;
+            background: var(--blast-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 0 15px rgba(138, 43, 226, 0.5));
+            margin: 0;
+        }
+
+        /* Sections */
+        .content-section {
+            padding: 100px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 40px;
+            border: 1px solid var(--primary-purple);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: #ff00ff;
+            margin-bottom: 20px;
+        }
+
+        .owner-info {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            text-align: left;
+            margin-top: 30px;
+        }
+
+        .owner-photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 3px solid var(--primary-purple);
+            background: #222;
+        }
+
+        .btn {
+            background: var(--blast-gradient);
+            padding: 15px 40px;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 30px;
+            transition: transform 0.2s;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+        }
+    </style>
 </head>
-
 <body>
-  <h1>BLAST</h1>
-  <p>
-    BLAST is a premium FiveM gang roleplay server.
-    Power, respect, and control define the city.
-  </p>
-  <a href="#">Join Discord</a>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#owner">The Founder</a>
+        <a href="#rules">Rules</a>
+    </nav>
+
+    <section id="home" class="hero">
+        <h1 class="blast-logo">BLAST</h1>
+        <p style="font-size: 1.5rem; letter-spacing: 3px;">POWER • RESPECT • CONTROL</p>
+        <a href="YOUR_DISCORD_LINK" class="btn">JOIN THE FAMILY</a>
+    </section>
+
+    <section id="owner" class="content-section">
+        <div class="card">
+            <h2>THE FOUNDER</h2>
+            <div class="owner-info">
+                <div class="owner-photo">
+                    <img src="owner.jpg" alt="Boss" style="width:100%; border-radius:50%;">
+                </div>
+                <div>
+                    <h3>Lead by [Your Name]</h3>
+                    <p>The visionary behind Blast. Known for high-stakes heists and absolute loyalty. Under his leadership, Blast has taken over the streets of Los Santos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="rules" class="content-section">
+        <div class="card">
+            <h2>GANG LAWS</h2>
+            <ul style="list-style: none; padding: 0; line-height: 2;">
+                <li>1. Loyalty is everything.</li>
+                <li>2. Never talk to the LSPD.</li>
+                <li>3. Respect the hierarchy.</li>
+                <li>4. Always wear the colors in the zone.</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer style="text-align:center; padding: 40px; opacity: 0.5;">
+        © 2026 BLAST | Built for the Streets
+    </footer>
+
 </body>
 </html>
